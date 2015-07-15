@@ -1,0 +1,80 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require spree/frontend
+
+ *= require_self
+ *= require_tree .
+*/
+
+.shipping-bar{padding:5px;text-align:center;color:#fff}
+.shipping-bar a{color:#fff;}
+.shipping-bar a span{margin-right:5px}
+.shipping-bar img{padding-bottom:2px}
+
+.jumbotron1 {
+	background-image: url(http://www8.imagesandwallpapers.com/img/black_and_white_car_wallpaper.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white !important;
+	height: 450px;
+}
+
+#jumbotron1-hero-image {
+	width: 400px;
+}
+
+#spree-header {
+	background: white;
+	margin-bottom: 0;
+}
+
+#spree-header #header {
+	padding: 0;
+}
+
+.navbar-brand img {
+	width: 300px;
+}
+
+#spree-header .nav a {
+  color: #777;
+}
+
+#spree-header .nav a.btn {
+  color: white;
+}
+
+#spree-header .nav a.btn:hover {
+  color: #666;
+}
+
+.navbar-brand {
+	float: none;
+}
+
+
+
+@media (min-width: 768px) {
+	.navbar-bottom {
+		margin: 12px 0 0 25px;
+	}
+
+	#spree-header .navbar-bottom a:hover {
+		background: none;
+		color: black;
+	}
+
+	#spree-header .nav a.btn-primary:hover {
+	  background: #073e6c;
+	  color: white;
+	}
+
+	.jumbotron {
+	  padding-top: 30px;
+	  padding-bottom: 30px;
+	}
+}

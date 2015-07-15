@@ -1,0 +1,133 @@
+<div id="spree-header" data-swiftype-index='false'>
+  <header id="header" data-hook>
+    <%= render :partial => 'spree/shared/shipping_bar' %>
+
+    <div class="well well-sm no-margin support-bar-well visible-xs" style="padding-left: 0; padding-right:0px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class='pull-left'>
+              <div class="dropdown ">
+                <a href="#" class="dropdown-toggle"  style="color: #777" data-toggle="dropdown"><center><strong><i class="fa fa-whatsapp"></i> </strong>(21) 99437-2128</center></a>
+              </div>
+            </div><!-- pull-left -->
+          </div>
+        </div>
+      </div>
+    </div><!-- support-bar-well -->
+
+    <div role="navigation" class="navbar navbar-default no-margin sm-navbar navbar-square hidden-xs" id='sub-nav'>        
+      <div class="container">
+        <div class='row'>
+          <div class="navbar-top-collapse navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left top">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><small><strong><i class="fa fa-whatsapp"></i> </strong><span>(21) 99437-2128</span></small></a>
+              </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right top">
+              <li class=""><a href="/pages/contact" class="">Contato</a></li>
+              <li class=""><a href="/account#orders" class="">Acompanhar Pedido</a></li>
+              <% if spree_current_user %>
+                <li><%= link_to Spree.t(:my_account), spree.account_path %></li>
+                <li><%= link_to Spree.t(:logout), spree.logout_path %></li>
+              <% else %>
+                <li><%= link_to Spree.t(:login), spree.login_path %></li>
+                <li><%= link_to Spree.t(:signup), spree_signup_path %></li>
+              <% end %>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!-- row -->
+      </div>  <!-- container -->
+    </div><!-- navbar static top -->
+
+    <div role="navigation" class="navbar-main navbar-default navbar-static-top" id='main-nav'>
+      <div class="container">
+
+        <div class="navbar-header hidden-sm">
+          <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only"><%= t('toggle_navigation') %></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand slim hidden-xs" href="/"><%= image_tag('logo.png') %>
+          <a class="navbar-brand visible-xs logo-xs" href="/"><%= image_tag('logo.png', class: "pull-left", style: 'margin-left:20px;') %></a>  
+
+          <div class="visible-xs">
+            <% unless current_page?(spree.cart_path) %>
+              <div id="link-to-cart-xs" class="pull-right" data-hook>
+                <noscript>
+                  <%= link_to Spree.t(:cart), '/cart' %>
+                </noscript>
+                <script>Spree.fetch_cart_xs()</script>
+              </div>
+            <% end %>
+          </div>
+
+        </div><!-- navbar header -->
+
+        <div class="navbar-header col-sm-12 visible-sm">
+          <a class="navbar-brand col-sm-12 text-center" href="/"><%= image_tag('logo.jpg') %></a>
+        </div><!-- navbar header -->
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse ">
+          <ul class="nav navbar-nav navbar-bottom">
+            <li class="">
+              <div>
+                <a class='btn btn-primary navbar-btn' href="/pages/wheels" title="Wheels">
+                  Comprar
+                </a>
+              </div>
+            </li>
+            <li class="visible-xs"><a href="/pages/contact" class="">Contato</a></li>
+            <li class="">
+              <a href="/pages/reviews" title="Reviews">
+                Depoimentos
+              </a>
+            </li>
+            <li class="">
+              <a href="/pages/information" title="Warranty & FAQ">
+                Garantia e FAQ
+              </a>
+            </li>
+            <li class="">
+              <a href="/pages/information#shipping-delivery" title="Shipping & Customs Tax">
+                Entrega
+              </a>
+            </li>
+            <li class="">
+              <a href="/pages/about" title="About Us">
+                Sobre
+              </a>
+            </li>
+            <li class="visible-xs"><a href="/account" class="">Pedido</a></li>
+
+            <% if spree_current_user %>
+              <li class="visible-xs"><%= link_to Spree.t(:my_account), spree.account_path %></li>
+              <li class="visible-xs"><%= link_to Spree.t(:logout), spree.logout_path %></li>
+            <% else %>
+              <li class="visible-xs"><%= link_to Spree.t(:login), spree.login_path %></li>
+              <li class="visible-xs"><%= link_to Spree.t(:signup), spree_signup_path %></li>
+            <% end %>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+
+            <% unless current_page?(spree.cart_path) %>
+            <li>
+              <div id="link-to-cart" data-hook>
+                <noscript>
+                  <%= link_to Spree.t(:cart), '/cart' %>
+                </noscript>
+                <script>Spree.fetch_cart()</script>
+              </div>
+            </li>
+            <% end %>
+          </ul> 
+        </div><!-- /.navbar-collapse --> 
+      </div><!-- navigation -->
+    </div>          
+  </header>
+</div>
