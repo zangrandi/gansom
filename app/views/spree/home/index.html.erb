@@ -6,10 +6,12 @@
     <div class="col-sm-7"> 
       <h1>Gansom Rodas</h1>
       <p>Compre Rodas e Acessórios para seu carro das melhores marcas</p>
-      <p><a id='index-cta-top'class="btn btn-warning btn-lg" href='/pages/wheels'>Comprar</a></p>
+      <p><a id='index-cta-top'class="btn btn-warning btn-lg" href='/products'>Comprar</a></p>
     </div>
   </div>
 </div>
 
-<%#= render :partial => 'spree/pages/landing_featurettes' %>
+<div class="container">
+  <%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
+</div>
 

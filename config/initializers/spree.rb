@@ -13,6 +13,11 @@ Spree.config do |config|
   # Example:
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
+  config.currency = 'BRL'
+end
+
+Spree::AppConfiguration.class_eval do
+  preference :site_name, :string, default: "Gansom"
 end
 
 Spree.user_class = "Spree::LegacyUser"

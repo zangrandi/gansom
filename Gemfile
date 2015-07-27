@@ -22,6 +22,7 @@ gem 'delayed_job_active_record'
 gem 'font_assets'
 
 gem 'spree', :git => 'https://github.com/spree/spree.git', branch: '3-0-stable'
+gem 'spree_i18n', github: 'spree/spree_i18n', branch: '3-0-stable'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '3-0-stable'
 

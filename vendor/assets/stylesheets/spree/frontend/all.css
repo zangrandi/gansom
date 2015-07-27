@@ -15,12 +15,13 @@
 .shipping-bar img{padding-bottom:2px}
 
 .jumbotron1 {
-	background-image: url(http://www8.imagesandwallpapers.com/img/black_and_white_car_wallpaper.jpg);
+	background-image: url("black_and_white_car_wallpaper.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: white !important;
 	height: 450px;
+	margin-top: -30px;
 }
 
 #jumbotron1-hero-image {
@@ -34,6 +35,7 @@
 
 #spree-header #header {
 	padding: 0;
+	margin-bottom: 30px;
 }
 
 .navbar-brand img {
@@ -56,20 +58,45 @@
 	float: none;
 }
 
+#footer a { 
+	color: #888;
+}
 
+#footer {
+	padding: 15px 0 15px 0;
+}
+
+#link-to-cart {
+	margin-right: 15px;
+}
 
 @media (min-width: 768px) {
 	.navbar-bottom {
 		margin: 12px 0 0 25px;
 	}
 
-	#spree-header .navbar-bottom a:hover {
+	#spree-header .navbar-bottom a:hover, #spree-header .navbar-bottom a:focus {
 		background: none;
 		color: black;
 	}
 
-	#spree-header .nav a.btn-primary:hover {
+	#spree-header .navbar-right a:hover, #spree-header .navbar-right a:focus {
+	  background: none;
+	  color: black;
+	}
+
+	#spree-header .navbar-left a:hover, #spree-header .navbar-left a:focus {
+	  background: none;
+	  color: black;
+	}
+
+	#spree-header .nav a.btn-primary:hover, #spree-header .nav a.btn-primary:focus {
 	  background: #073e6c;
+	  color: white;
+	}
+
+	#spree-header .nav a.btn-success:hover, #spree-header .nav a.btn-success:focus {
+	  background: #4ba74b;
 	  color: white;
 	}
 
